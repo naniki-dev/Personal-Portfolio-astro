@@ -1,0 +1,44 @@
+---
+const skillGroups = [
+  { label: "Languages", skills: ["Java", "Python", "JavaScript", "C"] },
+  { label: "Web & data", skills: ["HTML/CSS", "Bootstrap", "Flask", "API integration", "SQLite3"] },
+  { label: "Concepts", skills: ["OOP", "DSA", "Client-server architecture"] },
+  { label: "Tools & practices", skills: ["Git", "Git Bash", "Agile/Scrum"] },
+];
+---
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="about-wrap">
+    <div class="about-photo">
+      <img src="/images/DSC_0508.jpeg" alt="Portrait of myself" />
+    </div>
+    <div class="about-text">
+      <p>
+        I am a developer whose background in teaching shapes how I build
+        software. Time spent teaching complex ideas taught me to value
+        clarity, structure, and designing with people in mind.
+      </p>
+      <p>
+        I work full-stack, from backend logic like a real-time multiplayer
+        game and a terminal-based booking system, to front-end interfaces
+        that bring data to life on screen.
+      </p>
+      <p>
+        Outside of code, I am probably reading about history, out hiking, or
+        trying something new just to see if I'll like it. I am always up for
+        helping people, and I will never say no to a nap!
+      </p>
+    </div>
+    <div class="about-skills">
+      {skillGroups.map(group => (
+        <>
+          <span class="skill-label">{group.label}</span>
+          <ul class="skill-tags">
+            {group.skills.map(skill => <li>{skill}</li>)}
+          </ul>
+        </>
+      ))}
+    </div>
+  </div>
+</section>
