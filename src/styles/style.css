@@ -649,3 +649,122 @@ body {
     opacity: 1;
   }
 }
+
+html[data-theme="dark"] body {
+  background-color: #1b1512;
+  color: #f0e6e1;
+  background-image: radial-gradient(#2a221d 1px, transparent 1px);
+}
+
+html[data-theme="dark"] .navbar nav a,
+html[data-theme="dark"] .about-text p,
+html[data-theme="dark"] .project-card-body p {
+  color: #f0e6e1;
+}
+
+html[data-theme="dark"] .navbar nav a:hover,
+html[data-theme="dark"] .navbar nav a.active {
+  color: #e8a37e;
+}
+
+html[data-theme="dark"] .subheading {
+  color: #a8897a;
+}
+
+html[data-theme="dark"] .about-text p,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .tech-tags li,
+html[data-theme="dark"] .skill-tags li {
+  background-color: #241d19;
+  color: #f0e6e1;
+}
+
+html[data-theme="dark"] .contact-card:hover {
+  background-color: #33281f;
+}
+
+html[data-theme="dark"] .project-card {
+  background-color: #1b1512;
+  border-color: #3a2e27;
+}
+
+html[data-theme="dark"] .project-card:hover {
+  border-color: #e8a37e;
+}
+
+html[data-theme="dark"] .project-thumb {
+  background-color: #33281f;
+}
+
+html[data-theme="dark"] .view-button {
+  background-color: #33281f;
+  color: #e8a37e;
+}
+
+html[data-theme="dark"] .view-button:hover {
+  background-color: #3a2e27;
+}
+
+html[data-theme="dark"] .skill-label,
+html[data-theme="dark"] .contact-intro,
+html[data-theme="dark"] #projects h2::before,
+html[data-theme="dark"] #about h2::before,
+html[data-theme="dark"] #contact h2::before {
+  color: #eebba6;
+}
+
+html[data-theme="dark"] .contact-card i,
+html[data-theme="dark"] .project-links a {
+  color: #eebba6;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fbf3ef;
+  border: 1px solid rgba(122, 59, 34, 0.15);
+  color: #7a3b22;
+  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #f3cdbe;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  background-color: #241d19;
+  border-color: rgba(232, 163, 126, 0.2);
+  color: #e8a37e;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background-color: #33281f;
+}
+
+.theme-toggle-tip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #372c2a;
+  color: #fff;
+  font-size: 11px;
+  font-family: 'Work Sans', sans-serif;
+  padding: 5px 9px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.theme-toggle:hover .theme-toggle-tip {
+  opacity: 1;
+}
