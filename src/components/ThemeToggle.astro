@@ -1,22 +1,14 @@
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
   <i id="theme-icon" class="ti ti-moon" aria-hidden="true"></i>
-  <span id="theme-label">Dark mode</span>
   <span class="theme-toggle-tip">light mode is better btw</span>
 </button>
 
 <script is:inline>
   const btn = document.getElementById('theme-toggle');
   const icon = document.getElementById('theme-icon');
-  const label = document.getElementById('theme-label');
 
   function updateButton(theme) {
-    if (theme === 'dark') {
-      icon.className = 'ti ti-sun';
-      label.textContent = 'Light mode';
-    } else {
-      icon.className = 'ti ti-moon';
-      label.textContent = 'Dark mode';
-    }
+    icon.className = theme === 'dark' ? 'ti ti-sun' : 'ti ti-moon';
   }
 
   btn.addEventListener('click', () => {

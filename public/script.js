@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   titleTypewriter
-    .typeString('Lethabo Kgasi')
+    .typeString('lethabo naniki kgasi')
     .callFunction(() => {
       // hide the cursor on the heading once it's done
       const headingCursor = titleEl.querySelector('.Typewriter__cursor');
