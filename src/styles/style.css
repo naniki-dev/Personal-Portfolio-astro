@@ -11,7 +11,8 @@ html {
 body {
   background-color: #ffffff;
   color: #372c2a;
-  font-family: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
   min-height: 100vh;
   min-height: 100dvh; /* uses the real visible viewport on mobile, avoids the address-bar jump */
   overflow-x: hidden;
@@ -23,13 +24,13 @@ img {
 }
 
 h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;
 }
 
-.about-text p,
-.skill-tags li,
-.skill-label {
-  font-family: 'Work Sans', sans-serif;
+.about-text p {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
 }
 
 #projects,
@@ -54,7 +55,7 @@ section {
   padding: 32px 48px;
   display: flex;
   justify-content: flex-end;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'General Sans', sans-serif;
 
 }
 
@@ -96,9 +97,9 @@ section {
 
 .title {
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 16px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'General Sans', sans-serif;
 }
 
 .subheading {
@@ -107,18 +108,19 @@ section {
   margin-bottom: 32px;
   max-width: 420px;
   letter-spacing: 0.01em;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
 }
 
 .view-button {
   position: relative;
   display: inline-block;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
   background-color: #f3cdbe;
   color: #7a3b22;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
   padding: 12px 28px;
   border-radius: 6px;
   transition: background-color 0.2s ease, transform 0.1s ease;
@@ -499,19 +501,24 @@ html {
 #about h2,
 #contact h2 {
   margin-bottom: 40px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;
   font-size: 44px;
   opacity: 0.7;
 }
 
 .navbar nav a,
-.skill-label,
 .tech-tags li,
 .skill-tags li,
-.project-card-body h3,
 .contact-card span {
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
+}
+
+.skill-label,
+.project-card-body h3 {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;
 }
 
 .navbar nav a::before {
@@ -756,7 +763,8 @@ html[data-theme="dark"] .theme-toggle:hover {
   background-color: #372c2a;
   color: #fff;
   font-size: 11px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 400;
   padding: 5px 9px;
   border-radius: 5px;
   white-space: nowrap;
