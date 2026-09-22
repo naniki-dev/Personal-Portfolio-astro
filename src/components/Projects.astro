@@ -5,7 +5,7 @@ const projects = [
   {
     title: "POEM GENERATOR",
     description: "Developed an AI-powered poem generator that crafts a six-line poem from user prompts using the SheCodes AI API and a custom typewriter plugin for a realistic writing effect.",
-    image: "/images/Screenshot (1).png",
+    image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/Screenshot (1).png`,
     alt: "Screenshot of Project One",
     tags: ["HTML/CSS", "JavaScript", "AI API Integration"],
     demoUrl: "https://naniki-dev.github.io/AI-Poem-Generator/",
@@ -13,7 +13,7 @@ const projects = [
   {
     title: "GLOBAL FORECAST",
     description: "Users can search any city to pull live current conditions and a 4-day forecast, powered by async API calls with built-in loading and error handling for a responsive UI.",
-    image: "/images/Screenshot (2).png",
+    image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/Screenshot (2).png`,
     alt: "Screenshot of Project Name Three",
     tags: ["JavaScript", "Weather API Integration"],
     demoUrl: "https://naniki-dev.github.io/Global-Weather/",
@@ -23,7 +23,7 @@ const projects = [
 
 <section id="projects">
   <h2>My projects</h2>
-  <div class="project-grid">
+  <div class="project-list">
     {projects.map(project => <ProjectCard {...project} />)}
   </div>
 </section>

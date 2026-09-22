@@ -8,21 +8,20 @@ interface Props {
   demoUrl: string;
 }
 
-const { title, description, image, alt, tags, demoUrl } = Astro.props;
+const { title, description, image, alt, tags, demoUrl } = Astro.props as Props;
 ---
 
-<article class="project-card">
-  <div class="project-thumb">
+<a href={demoUrl} target="_blank" rel="noopener" class="project-row">
+  <div class="project-row-thumb">
     <img src={image} alt={alt} />
   </div>
-  <div class="project-card-body">
-    <h3>{title}</h3>
-    <p>{description}</p>
-    <ul class="tech-tags">
-      {tags.map(tag => <li>{tag}</li>)}
-    </ul>
-    <div class="project-links">
-      <a href={demoUrl} target="_blank" rel="noopener">Click for Live Demo</a>
-    </div>
+  <div class="project-row-text">
+    <p class="project-row-title">{title}</p>
+    <p class="project-row-desc">{description}</p>
+    <span class="project-row-desc-tip">{description}</span>
   </div>
-</article>
+  <ul class="project-row-tags">
+    {tags.map(tag => <li>{tag}</li>)}
+  </ul>
+  <i class="ti ti-arrow-right project-row-arrow" aria-hidden="true"></i>
+</a>

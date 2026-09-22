@@ -1,0 +1,81 @@
+<!-- shell for the widget — shows a loading message until the fetch below finishes -->
+<div class="commit-widget" id="commit-feed">
+  <span class="commit-label">Latest commits on my GitHub</span>
+  <div class="commit-row" id="commit-row">
+    <p class="commit-meta">Loading recent activity...</p>
+  </div>
+</div>
+
+<!-- is:inline so Astro leaves this alone and runs it as-is in the browser -->
+<script is:inline>
+// wrapping in an async function so I can use await inside it
+(async function() {
+  const row = document.getElementById('commit-row');
+
+  try {
+    // pulls my activity across all my public repos, not just this one.
+    // no-store so the browser doesn't cache this and give me a stale 304
+    const res = await fetch('https://api.github.com/users/naniki-dev/events/public', { cache: 'no-store' });
+    if (!res.ok) throw new Error('fetch failed');
+
+    // only care about pushes (actual commits), just the last 3
+    const events = await res.json();
+    const pushEvents = events.filter(e => e.type === 'PushEvent').slice(0, 3);
+
+    // in case there's genuinely nothing recent
+    if (pushEvents.length === 0) {
+      row.innerHTML = '<p class="commit-meta">No recent public activity.</p>';
+      return;
+    }
+
+    // turns a timestamp into something like "3 weeks ago"
+    const timeAgo = (dateStr) => {
+      const seconds = Math.floor((new Date() - new Date(dateStr)) / 1000);
+      const units = [['year',31536000],['month',2592000],['week',604800],['day',86400],['hour',3600],['minute',60]];
+      for (const [name, secs] of units) {
+        const val = Math.floor(seconds / secs);
+        if (val >= 1) return `${val} ${name}${val > 1 ? 's' : ''} ago`;
+      }
+      return 'just now';
+    };
+
+    // the events feed only gives me SHA hashes, not the actual commit
+    // message, so for each push I fetch that specific commit to get
+    // the real message. Promise.all runs these fetches at the same
+    // time instead of one after another
+    const commitDetails = await Promise.all(pushEvents.map(async event => {
+      const repoFullName = event.repo.name; // e.g. "naniki-dev/portfolio"
+      const sha = event.payload.head;
+      const commitRes = await fetch(`https://api.github.com/repos/${repoFullName}/commits/${sha}`, { cache: 'no-store' });
+
+      let message = 'View commit on GitHub'; // fallback if this one fetch fails
+      if (commitRes.ok) {
+        const commitData = await commitRes.json();
+        message = commitData.commit.message.split('\n')[0]; // just the first line, in case it's a multi-line message
+      }
+
+      return {
+        message,
+        repoName: repoFullName.split('/')[1],
+        date: event.created_at,
+      };
+    }));
+
+    // build a little card for each commit and drop them all in at once
+    row.innerHTML = commitDetails.map(c => `
+      <div class="commit-item">
+        <i class="ti ti-git-commit" aria-hidden="true"></i>
+        <div>
+          <p class="commit-msg">${c.message}</p>
+          <p class="commit-meta">${c.repoName} · ${timeAgo(c.date)}</p>
+        </div>
+      </div>`
+    ).join('');
+
+  } catch (e) {
+    // catches network issues, rate limits, whatever went wrong above —
+    // better than leaving "Loading..." stuck there forever
+    row.innerHTML = '<p class="commit-meta">Commit feed unavailable right now.</p>';
+  }
+})();
+</script>
