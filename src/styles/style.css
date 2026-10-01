@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +7,15 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #ffffff;
   color: #372c2a;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
-  min-height: 100vh;
-  min-height: 100dvh; /* uses the real visible viewport on mobile, avoids the address-bar jump */
+  min-height: 100dvh;
   overflow-x: hidden;
 }
 
@@ -24,30 +25,27 @@ img {
 }
 
 h3 {
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 600;
 }
 
 .about-text p {
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
 }
 
-#projects,
-#about,
-#contact {
+#projects, #about, #contact {
   align-items: center;
   justify-content: flex-start;
-  text-align: center;  
+  text-align: center;
   padding-top: 60px;
 }
 
 section {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 60px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
 }
 
 .navbar {
@@ -55,8 +53,7 @@ section {
   padding: 32px 48px;
   display: flex;
   justify-content: space-between;
-  font-family: 'General Sans', sans-serif;
-
+  font-family: "General Sans", sans-serif;
 }
 
 .navbar nav ul {
@@ -76,13 +73,12 @@ section {
 }
 
 .navbar nav a:hover {
-  color:#7a3b22;
+  color: #7a3b22;
 }
 
 .navbar nav a.active {
-  color:#7a3b22;
+  color: #7a3b22;
 }
-
 
 .landing {
   flex: 1;
@@ -94,28 +90,27 @@ section {
   padding: 0 24px;
 }
 
-
 .title {
   font-size: 44px;
   font-weight: 600;
   margin-bottom: 16px;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
 }
 
 .subheading {
   font-size: 16px;
-  color:#b8978c;
+  color: #b8978c;
   margin-bottom: 32px;
   max-width: 420px;
   letter-spacing: 0.01em;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
 }
 
 .view-button {
   position: relative;
   display: inline-block;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
   background-color: #f3cdbe;
   color: #7a3b22;
@@ -130,10 +125,6 @@ section {
   background-color: #eebba6;
   transform: translateY(-1px);
   box-shadow: 0 0 0 1px rgba(122, 59, 34, 0.15), 0 6px 20px -6px rgba(122, 59, 34, 0.45);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 #contact {
@@ -204,138 +195,134 @@ html {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    justify-content: center;
-    padding: 20px 16px;
-  }
+.navbar {
+  justify-content: center;
+  padding: 20px 16px;
+}
 
-  .navbar nav ul {
-    gap: 16px;
-  }
+.navbar nav ul {
+  gap: 16px;
+}
 
-  .navbar nav a {
-    font-size: 12px;
-  }
+.navbar nav a {
+  font-size: 12px;
+}
 
-  .title {
-    font-size: 32px;
-  }
+.title {
+  font-size: 32px;
+}
 
-  .subheading {
-    font-size: 14px;
-    max-width: 100%;
-  }
+.subheading {
+  font-size: 14px;
+  max-width: 100%;
+}
 
-  #projects h2,
-  #about h2,
-  #contact h2 {
-    font-size: 32px;
-    margin-bottom: 24px;
-  }
+#projects h2, #about h2, #contact h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
 
-  #projects,
-  #about,
-  #contact {
-    padding-top: 40px;
-  }
+#projects, #about, #contact {
+  padding-top: 40px;
+}
 
-  .about-wrap {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 0 16px 40px;
-  }
+.about-wrap {
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 16px 40px;
+}
 
-  .about-photo {
-    width: 180px;
-    height: 260px;
-  }
+.about-photo {
+  width: 180px;
+  height: 260px;
+}
 
-  .about-text,
-  .about-skills {
-    max-width: 100%;
-    width: 100%;
-  }
+.about-text, .about-skills {
+  max-width: 100%;
+  width: 100%;
+}
 
-  .skill-label {
-    margin-top: 16px;
-  }
+.skill-label {
+  margin-top: 16px;
+}
 
-  .project-list {
-    padding: 0 16px 40px;
-  }
+.project-list {
+  padding: 0 16px 40px;
+}
 
-  .project-row {
-    flex-wrap: wrap;
-  }
+.project-row {
+  flex-wrap: wrap;
+}
 
-  .project-row-tags {
-    order: 3;
-    width: 100%;
-    padding-left: 78px; /* lines tags up under the text, past the thumbnail */
-  }
+.project-row-tags {
+  order: 3;
+  width: 100%;
+  padding-left: 78px;
+}
 
-  #contact {
-    min-height: auto;
-    padding: 40px 16px;
-  }
+#contact {
+  min-height: auto;
+  padding: 40px 16px;
+}
 
-  .contact-links {
-    width: 100%;
-  }
+.contact-links {
+  width: 100%;
+}
 
-  .contact-card span {
-    font-size: 13px;
-    word-break: break-all; /* Prevents long link text from spilling out */
-  }
-
+.contact-card span {
+  font-size: 13px;
+  word-break: break-all;
+}
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    padding: 16px 12px;
-  }
-
-  .navbar nav ul {
-    gap: 10px;
-  }
-
-  .navbar nav a {
-    font-size: 11px;
-  }
-
-  .landing {
-    padding: 0 16px;
-  }
-
-  .title {
-    font-size: 26px;
-  }
-
-  .subheading {
-    font-size: 13px;
-  }
-
-  .view-button {
-    padding: 10px 22px;
-    font-size: 13px;
-  }
-
-  #projects h2,
-  #about h2,
-  #contact h2 {
-    font-size: 26px;
-  }
-
-  .about-photo {
-    width: 150px;
-    height: 210px;
-  }
-
-  .contact-card {
-    padding: 12px 14px;
-  }
+.navbar {
+  padding: 16px 12px;
 }
+
+.navbar nav ul {
+  gap: 10px;
+}
+
+.navbar nav a {
+  font-size: 11px;
+}
+
+.landing {
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.subheading {
+  font-size: 13px;
+}
+
+.view-button {
+  padding: 10px 22px;
+  font-size: 13px;
+}
+
+#projects h2, #about h2, #contact h2 {
+  font-size: 26px;
+}
+
+.about-photo {
+  width: 150px;
+  height: 210px;
+}
+
+.contact-card {
+  padding: 12px 14px;
+}
+}
+
+/* This now covers the ENTIRE row (inset: 0) rather than floating below
+   the text — so however tall the full description is, it's contained
+   within this row's own footprint and can never overlap a sibling row. */
 
 .project-list {
   width: 100%;
@@ -349,7 +336,7 @@ html {
 }
 
 .project-row {
-  position: relative; /* anchors the full-description overlay to THIS row only */
+  position: relative;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -391,7 +378,7 @@ html {
 .project-row-title {
   font-size: 13px;
   font-weight: 600;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   margin: 0 0 2px;
 }
 
@@ -402,12 +389,9 @@ html {
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; /* keeps descriptions to one line so rows stay compact */
+  white-space: nowrap;
 }
 
-/* This now covers the ENTIRE row (inset: 0) rather than floating below
-   the text — so however tall the full description is, it's contained
-   within this row's own footprint and can never overlap a sibling row. */
 .project-row-desc-tip {
   position: absolute;
   inset: 0;
@@ -452,12 +436,12 @@ html {
   flex-shrink: 0;
 }
 
- .about-skills {
+.about-skills {
   flex: 1 1 420px;
   max-width: 480px;
   padding-top: 4px;
 }
- 
+
 .about-wrap {
   width: 100%;
   max-width: 1400px;
@@ -483,14 +467,14 @@ html {
   flex-shrink: 0;
   background-color: #f3cdbe;
 }
- 
+
 .about-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
- 
+
 .about-text p {
   font-size: 15px;
   line-height: 1.75;
@@ -511,7 +495,7 @@ html {
   flex-direction: column;
   gap: 20px;
 }
- 
+
 .skill-tags {
   list-style: none;
   display: flex;
@@ -519,13 +503,15 @@ html {
   gap: 8px;
   margin-top: 16px;
 }
- 
+
 .skill-tags li {
   font-size: 12px;
   color: #7a3b22;
   background-color: #fbf3ef;
   padding: 5px 12px;
   border-radius: 4px;
+  border: 1px solid rgba(122, 59, 34, 0.12);
+  letter-spacing: 0.02em;
 }
 
 .skill-label {
@@ -536,32 +522,24 @@ html {
   letter-spacing: 0.05em;
   color: #a8574a;
   margin: 20px 0 4px;
+  font-family: "General Sans", sans-serif;
 }
 
 .skill-label:first-of-type {
   margin-top: 0;
 }
 
-#projects h2,
-#about h2,
-#contact h2 {
+#projects h2, #about h2, #contact h2 {
   margin-bottom: 40px;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 600;
   font-size: 44px;
   opacity: 0.7;
 }
 
-.navbar nav a,
-.skill-tags li,
-.contact-card span {
-  font-family: 'General Sans', sans-serif;
+.navbar nav a, .skill-tags li, .contact-card span {
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
-}
-
-.skill-label {
-  font-family: 'General Sans', sans-serif;
-  font-weight: 600;
 }
 
 .navbar nav a::before {
@@ -581,8 +559,7 @@ html {
   transition: width 0.25s ease;
 }
 
-.navbar nav a:hover::after,
-.navbar nav a.active::after {
+.navbar nav a:hover::after, .navbar nav a.active::after {
   width: 100%;
 }
 
@@ -593,8 +570,7 @@ body {
   background-position: -13px -13px;
 }
 
-.navbar,
-.landing {
+.navbar, .landing {
   position: relative;
   z-index: 1;
 }
@@ -609,11 +585,9 @@ body {
   font-weight: 400;
 }
 
-#projects h2::before,
-#about h2::before,
-#contact h2::before {
+#projects h2::before, #about h2::before, #contact h2::before {
   display: block;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: "JetBrains Mono", "Space Mono", monospace;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -622,12 +596,19 @@ body {
   margin-bottom: 10px;
 }
 
-#projects h2::before { content: "$ cd ./projects"; }
-#about h2::before     { content: "$ cd ./about"; }
-#contact h2::before   { content: "$ cd ./contact"; }
+#projects h2::before {
+  content: "$ cd ./projects";
+}
 
-.about-photo::before,
-.about-photo::after {
+#about h2::before {
+  content: "$ cd ./about";
+}
+
+#contact h2::before {
+  content: "$ cd ./contact";
+}
+
+.about-photo::before, .about-photo::after {
   content: "";
   position: absolute;
   width: 18px;
@@ -651,16 +632,11 @@ body {
   border-right: 2px solid;
 }
 
-.skill-tags li {
-  border: 1px solid rgba(122, 59, 34, 0.12);
-  letter-spacing: 0.02em;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .title::after {
-    animation: none;
-    opacity: 1;
-  }
+.title::after {
+  animation: none;
+  opacity: 1;
+}
 }
 
 html[data-theme="dark"] body {
@@ -669,13 +645,11 @@ html[data-theme="dark"] body {
   background-image: radial-gradient(#2a221d 1px, transparent 1px);
 }
 
-html[data-theme="dark"] .navbar nav a,
-html[data-theme="dark"] .about-text p {
+html[data-theme="dark"] .navbar nav a, html[data-theme="dark"] .about-text p {
   color: #f0e6e1;
 }
 
-html[data-theme="dark"] .navbar nav a:hover,
-html[data-theme="dark"] .navbar nav a.active {
+html[data-theme="dark"] .navbar nav a:hover, html[data-theme="dark"] .navbar nav a.active {
   color: #e8a37e;
 }
 
@@ -683,9 +657,7 @@ html[data-theme="dark"] .subheading {
   color: #a8897a;
 }
 
-html[data-theme="dark"] .about-text p,
-html[data-theme="dark"] .contact-card,
-html[data-theme="dark"] .skill-tags li {
+html[data-theme="dark"] .about-text p, html[data-theme="dark"] .contact-card, html[data-theme="dark"] .skill-tags li {
   background-color: #241d19;
   color: #f0e6e1;
 }
@@ -724,11 +696,7 @@ html[data-theme="dark"] .view-button:hover {
   background-color: #3a2e27;
 }
 
-html[data-theme="dark"] .skill-label,
-html[data-theme="dark"] .contact-intro,
-html[data-theme="dark"] #projects h2::before,
-html[data-theme="dark"] #about h2::before,
-html[data-theme="dark"] #contact h2::before {
+html[data-theme="dark"] .skill-label, html[data-theme="dark"] .contact-intro, html[data-theme="dark"] #projects h2::before, html[data-theme="dark"] #about h2::before, html[data-theme="dark"] #contact h2::before {
   color: #eebba6;
 }
 
@@ -751,6 +719,7 @@ html[data-theme="dark"] .contact-card i {
   flex-shrink: 0;
   transition: background-color 0.2s ease;
 }
+
 .theme-toggle i {
   font-size: 20px;
 }
@@ -777,7 +746,7 @@ html[data-theme="dark"] .theme-toggle:hover {
   background-color: #372c2a;
   color: #fff;
   font-size: 11px;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-weight: 400;
   padding: 5px 9px;
   border-radius: 5px;
@@ -806,7 +775,7 @@ html[data-theme="dark"] .theme-toggle:hover {
   letter-spacing: 0.05em;
   color: #a8574a;
   margin-bottom: 12px;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: "JetBrains Mono", "Space Mono", monospace;
 }
 
 .commit-row {
@@ -839,7 +808,7 @@ html[data-theme="dark"] .theme-toggle:hover {
   font-size: 10px;
   color: #b8978c;
   margin: 2px 0 0;
-  font-family: 'JetBrains Mono', 'Space Mono', monospace;
+  font-family: "JetBrains Mono", "Space Mono", monospace;
 }
 
 html[data-theme="dark"] .commit-widget {
