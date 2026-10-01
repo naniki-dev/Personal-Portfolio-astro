@@ -141,14 +141,32 @@ section {
   font-size: 15px;
   color: #a8574a;
   line-height: 1.6;
-  margin: 0 0 32px;
+  margin: 0 0 8px;
+  max-width: 650px;
+}
+
+.contact-gif {
+  width: 350px;
+  height: 280px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-gif img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .contact-links {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 420px;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -162,6 +180,10 @@ section {
   text-decoration: none;
   color: #372c2a;
   transition: background-color 0.2s ease;
+  flex: 1;
+  min-width: 0;
+  gap: 8px;
+  padding: 14px 12px;
 }
 
 .contact-card:hover {
@@ -176,8 +198,8 @@ section {
 
 .contact-card span {
   flex: 1;
-  text-align: left;
-  font-size: 14px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .contact-card i:last-child {
@@ -195,6 +217,23 @@ section {
 }
 
 @media (max-width: 768px) {
+
+.contact-gif {
+  width: 150px;
+  height: 125px;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  flex-direction: column;
+  max-width: 420px;
+}
+
+.contact-card {
+  flex: none;
+  width: 100%;
+}
+
 .navbar {
   justify-content: center;
   padding: 20px 16px;
