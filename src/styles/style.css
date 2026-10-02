@@ -217,6 +217,14 @@ section {
 
 @media (max-width: 768px) {
 
+.about-wrap-skills .about-photo {
+  margin-left: 28px;
+}
+
+.about-photo {
+  margin-left: 28px;
+}
+
 .contact-gif {
   width: 380px;
   height: 350px;
@@ -494,7 +502,7 @@ section {
 
 .about-photo {
   position: relative;
-  width: 320px;
+  width: 280px;
   height: 500px;
   border-radius: 12px;
   overflow: hidden;
