@@ -3,32 +3,51 @@ import ProjectCard from './ProjectCard.astro';
 
 const projects = [
   {
-    title: "POEM GENERATOR",
+    title: "Poem Generator",
     description: "Developed an AI-powered poem generator that crafts a six-line poem from user prompts using the SheCodes AI API and a custom typewriter plugin for a realistic writing effect.",
     image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/Screenshot (1).png`,
-    alt: "Screenshot of Project One",
+    alt: "Screenshot of Project",
     tags: ["HTML/CSS", "JavaScript", "AI API Integration"],
     demoUrl: "https://naniki-dev.github.io/AI-Poem-Generator/",
   },
+
+  {
+    title: "Global Forecast",
+    description: "Users can search any city to pull live current conditions and a 4-day forecast, powered by async API calls with built-in loading and error handling for a responsive UI.",
+    image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/Screenshot (2).png`,
+    alt: "Screenshot of Project Name Three",
+    tags: ["JavaScript", "Weather API Integration"],
+    demoUrl: "https://naniki-dev.github.io/Global-Weather/",
+  },
+
+  {
+  title: "Save a birthday",
+  description: "A full-stack birthday management web app, featuring CRUD functionality and persistent data storage.",
+  image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/birthdays.png`,
+  alt: "Screenshot of Project",
+  tags: ["Python", "Flask", "SQLite", "HTML/CSS"],
+  demoUrl: "https://github.com/naniki-dev/save-your-birthday",
+  },
+
+  {
+  title: "RSA History Quiz",
+  description: "An interactive South African history quiz, exploring key events on the road to democracy from 1948 to 1994. Features multiple-choice and free-response questions, instant feedback, educational explanations, progress tracking, and a final score screen.",
+  image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/quiz.png`,
+  alt: "Screenshot of Project",
+  tags: ["JavaScript", "HTML/CSS"],
+  demoUrl: "https://naniki-dev.github.io/trivia/",
+  },
   /*
-  {
-  title: "",
-  description: "",
-  image: '',
-  alt: "",
-  tags: [],
-  demoUrl: "",
-  },
-  {
-  title: "",
-  description: "",
-  image: '',
-  alt: "",
-  tags: [],
-  demoUrl: "",
-  },
   
   {
+  title: "Investment Stock Portfolio",
+  description: "A full-stack stock trading simulation, featuring user authentication, real-time stock lookups, stock trading, portfolio tracking, and transaction history.",
+  image: '',
+  alt: "Screenshot of Project",
+  tags: ["Python", "Flask", "SQLite", "HTML/CSS"],
+  demoUrl: "",
+  },
+  {
   title: "",
   description: "",
   image: '',
@@ -36,7 +55,15 @@ const projects = [
   tags: [],
   demoUrl: "",
   },
-  {
+    {
+  title: "",
+  description: "",
+  image: '',
+  alt: "",
+  tags: [],
+  demoUrl: "",
+  },
+    {
   title: "",
   description: "",
   image: '',
@@ -45,14 +72,6 @@ const projects = [
   demoUrl: "",
   },
   */
-  {
-    title: "GLOBAL FORECAST",
-    description: "Users can search any city to pull live current conditions and a 4-day forecast, powered by async API calls with built-in loading and error handling for a responsive UI.",
-    image: `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images/Screenshot (2).png`,
-    alt: "Screenshot of Project Name Three",
-    tags: ["JavaScript", "Weather API Integration"],
-    demoUrl: "https://naniki-dev.github.io/Global-Weather/",
-  },
 ];
 ---
 
